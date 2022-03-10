@@ -3,9 +3,7 @@
  * y declaración de campos útiles.
  * 
  * @author Bonino, Francisco Ignacio.
- * 
  * @version 0.0.1
- * 
  * @since 09/03/2022
  */
 
@@ -48,6 +46,8 @@ public class Main {
      * Aquí se instancia y ejecuta todo el programa.
      * 
      * @param args Argumentos para ejecutar el programa.
+     * 
+     * @version 0.0.1
      */
     public static void main(String[] args) {
         setGUIProperties();
@@ -62,6 +62,8 @@ public class Main {
     /**
      * Este método se encarga de setear las propiedades
      * de la interfaz gráfica del programa.
+     * 
+     * @version 0.0.1
      */
     private static void setGUIProperties() {
         UIManager.put("OptionPane.background", FRAMES_BG_COLOR);
@@ -77,7 +79,9 @@ public class Main {
 
         try {
             // Se registra la fuente para poder setearla
-            PROGRAM_FONT = Font.createFont(Font.TRUETYPE_FONT, new File(TTF_PATH + FONT_NAME + ".ttf")).deriveFont(FONT_SIZE);
+            PROGRAM_FONT = Font.createFont(Font.TRUETYPE_FONT,
+                                           new File(TTF_PATH + FONT_NAME + ".ttf"))
+                                               .deriveFont(FONT_SIZE);
 
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 
@@ -95,6 +99,8 @@ public class Main {
      * Este método se encarga de setear la fuente utilizada para el programa.
      * 
      * @param f Fuente a utilizar.
+     * 
+     * @version 0.0.1
      */
     private static void setUIFont(Font f) {
         Enumeration<Object> keys = UIManager.getDefaults().keys();
